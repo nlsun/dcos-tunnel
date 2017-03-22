@@ -15,12 +15,10 @@ test:
 
 test-binary: test
 	${SHELL} -c ". env/bin/activate; \
-		pip install pytest; \
 		bin/test-binary.sh"
 
-test-binary-single:
+test-binary-debug:
 	${SHELL} -c ". env/bin/activate; \
-		pip install pytest; \
 		bin/test-binary.sh $(test)"
 
 packages:
@@ -28,5 +26,4 @@ packages:
 
 binary: clean env packages
 	${SHELL} -c ". env/bin/activate; \
-		pip install pyinstaller==3.2.1; \
 		pyinstaller binary/binary.spec"
