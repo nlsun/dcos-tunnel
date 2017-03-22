@@ -1,6 +1,5 @@
 import json
 import os
-import requests
 import shlex
 import signal
 import subprocess
@@ -31,6 +30,7 @@ TRANSPARENT_SUFFIX = ".mydcos.directory"
 
 STANDARD_MODE = "standard"
 TRANSPARENT_MODE = "transparent"
+
 
 def setup_module():
     print("SETUP")
